@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dynamic">
+	<select id="if_test" parameterType="String" resultType="mybatis.BoardVo">
+		select serial, subject, content, mDate, id, pwd, hit, pSerial from Board 
+		<if test="_parameter != null">
+			where subject like '%${_parameter}%' or content like '%${_parameter}%'
+		</if>
+	</select>
+	
+	<select id="choose_test" parameterType="String" resultType="Integer">
+		<choose>
+			<when test='_parameter.equals("안")'>
+				select count(*) from board where subject like '%안%'
+			</when>
+			<when test='_parameter.equals("h")'>
+				select count(*) from board where subject like '%h%'
+			</when>
+			<otherwise>
+				select count(*) from board 
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="where_test" parameterType="mybatis.BoardVo" resultType="Integer">
+		select count(*) from board
+		<where>
+			<if test="serial != 0">
+				pSerial = ${serial}
+			</if>
+			<if test="id != null">
+				 or id like '%${id}%'
+			</if>
+		</where>
+	</select>
+	
+	<update id="set_test" parameterType="mybatis.BoardVo">
+		update board 
+		<set>
+			<if test="subject != null">
+				subject = #{subject}		
+			</if>
+			<if test="content != null">
+				, content = #{content}
+			</if>
+		</set>
+		where serial = #{serial}
+	</update>
+	
+	<select id="trim_test" parameterType="mybatis.BoardVo" resultType="Integer">
+		select count(*) from board
+		<trim prefix="where" prefixOverrides="or|and" suffixOverrides=",">
+			or subject like '%${subject}%', 
+		</trim>
+	</select>
+	
+	<select id="foreach_test" parameterType="List" resultType="mybatis.BoardVo"><!-- 배열이면 무조건 array로 받아야함 -->
+		select * from board
+		<where>
+			id in
+			<foreach collection="array" item="data" open="(" close=")" separator=","> 
+				#{data}
+			</foreach>
+		</where>
+	</select>
+	
+	<select id="pl_sql" statementType="CALLABLE" parameterType="mybatis.BoardVo" resultType="mybatis.BoardVo">
+		{call 
+			hr.get_boardVo(
+				#{serial, mode=IN, jdbcType=INTEGER},
+				#{subject, mode=OUT, jdbcType=VARCHAR},
+				#{id, mode=OUT, jdbcType=VARCHAR},
+				#{mDate, mode=OUT, jdbcType=VARCHAR},
+				#{hit, mode=OUT, jdbcType=INTEGER}	
+			)
+		}
+	</select>
+	
+	
+</mapper>

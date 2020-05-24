@@ -1,0 +1,143 @@
+@charset "UTF-8";
+#main{
+	width:1200px;
+	background-color:#fff;
+	margin:auto;
+}
+
+input{
+	margin-bottom:5px;
+}
+
+.here{
+	background-color:#A6A6A6;
+}
+
+#btnPdel{
+	position:absolute;
+    top:350px;
+    left:531px;
+}
+
+#login{
+	text-align:right;
+	margin:5px;
+	padding:5px;
+	box-sizing:border-box; 
+}
+
+#login_form{
+	margin:10px 0 10px 0;
+	text-align:center;
+	padding-bottom:10px;
+	box-sizing:border-box;
+}
+
+#btnLog, #btnCancel{
+	width:80px;
+	padding:4px 7px 4px 7px;
+	background-color:#4374D9;
+	font-family:휴먼둥근헤드라인;
+	color:#fff;
+}
+
+#header{
+	background-image:url(../images/기차.jpg);
+	background-size:100% 100%;
+	height:150px;
+}
+
+#nav{
+	background-color:#868686;
+	overflow:hidden;
+	margin-top:5px;
+}
+#nav>ul{
+	text-align:right;	
+}
+#nav li{
+	text-align:center;
+	display:inline;
+	font-weight:bold;
+	float:left;
+	padding-left:30px;
+	list-style:none;
+	font-family:휴먼매직체;
+}
+
+#nav li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:13px;
+}
+
+#nav li:hover{
+	color:#353535;
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+#center{
+	overflow:hidden;	
+}
+
+#center>div, #aside{
+	float:left;
+}
+
+#sub_menu{
+	width:200px;
+	background-color:#D5D5D5;
+	font-family:휴먼매직체;
+}
+
+#sub_menu li{ list-style:none; }
+#sub_menu li a{
+	text-decoration:none;
+	color:#5D5D5D;
+}
+
+#main_content{
+	width:800px;
+	background-color:#EAEAEA;
+	font-family:12롯데마트드림;
+	padding:20px;
+	box-sizing:border-box;
+}
+
+#main_content>ul li a{
+	text-decoration:none;
+	color:#5D5D5D;
+}
+
+#lPhoto{
+	position:absolute;
+	top: 328px;
+    left: 435px;
+}
+
+#photo{
+	position:absolute;
+	top: 350px;
+    left: 435px;
+}
+
+#btnPhoto{
+	position:absolute;
+	top: 503px;
+    left: 435px;
+}
+
+#aside{
+	width:200px;
+	background-color:#ffffff;
+}
+
+#footer{
+	font-family:나눔스퀘어;
+	margin-top:10px;
+	height:150px;
+	padding:5px 16px;
+	background-color:#EAEAEA;
+	box-sizing:border-box; /* padding때문에 border크기가 늘어나도 최대한 border크기에 맞게 해주는 것 */
+}

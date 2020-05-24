@@ -1,0 +1,31 @@
+/* css/mybatis.css */
+@charset "UTF-8";
+
+/* index_mubatis.jsp */
+#mybatis {width: 1000px; margin: auto;}
+#mybatis>#header {background: #555; color: #fff; height: 160px; text-align: center; font-size: 2em; padding-top: 1px;}
+#mybatis>#center {min-height: 100px; /* 최소높이 */}
+#mybatis>#footer {background: #d3d3d3; padding: 50px; text-align: center; font-size: 1em;}
+
+/* select.jsp */
+#mybatis #frm_select {width: 100%; text-align: right;}
+#mybatis #frm_select>div {display: inline-block;}
+#mybatis>#title {margin-top:10px; padding: 5px 0 5px 0; background-color: #777; color: #fff; font-size:18px; font-family: 여기어때 잘난체}
+#mybatis>#title>span {display: table-cell;}
+#mybatis .no {width: 80px; padding: 0 20px 0 25px;}
+#mybatis .subject {width: 430px;}
+#mybatis .id {width: 150px;}
+#mybatis .mDate {width: 180px;}
+#mybatis .hit {width: 100px;}
+#mybatis #table {display: table;}
+#mybatis .row {display: table-row;margin-top: 5px;}
+#mybatis .row span {display: table-cell;}
+#mybatis .row:hover {cursor: pointer; background-color: #ddd;}
+#mybatis #page {text-align: center; margin: 10px 0 20px 0;}
+#mybatis #page input[type=button] {border-radius: 10px; border: 1px solid #bbb;}
+#mybatis #page input[type=button]:hover {background-color: #bdbdbd;}
+
+/* insert.jsp */
+#mybatis #frm_insert {width:500px;}
+#mybatis #frm_insert label {display: inline-block; width:70px; text-align: center;}
+#mybatis #frm_insert textarea {width: 930px; height:250px; margin-left: 76px;}

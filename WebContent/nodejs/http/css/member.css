@@ -1,0 +1,54 @@
+@charset "UTF-8";
+form>label{
+	display:inline-block;
+	width:70px;
+	text-align:left;
+}
+h3{
+	font-family:여기어때 잘난체;
+	font-size:1em;
+}
+
+/* select */
+#result{
+	display:inline-block;
+	width:380px;
+	height:300px;
+	border:1px solid #EAEAEA;
+	overflow:auto;
+	background-image:url('../../../images/풍등.gif');
+}
+.title{
+	width:380px;
+	background:rgb(61, 61, 59);
+	color:rgb(235, 235, 217);
+	margin-top:5px;
+	padding-bottom:4px;
+}
+#item:hover{
+	background:#ccc;
+	font-weight:bold;
+	cursor:pointer;
+}
+.mId{padding:0 20px 0 10px;}
+.mName{padding-right:30px;}
+.rDate{width:30px;}
+.grade{width:70px;}
+
+/* insert */
+#insert>form>label{
+	display:inline-block;
+	width:60px;
+	text-align:right;
+}
+
+/* 처리결과 */
+.result_ok{
+	border:2px solid #00f;
+	border-radius:10px;
+	background-color:#aaf;
+	display:inline-block;
+	padding:20px;
+	width:300px;
+	magin:20px;
+}

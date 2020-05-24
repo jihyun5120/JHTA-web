@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.html</title>
+<link rel='stylesheet' type='text/css' href='member.css' />
+<script src='./lib/jquery-3.4.1.js'></script>
+<script src='./lib/member.js'></script>
+<style>
+	#main{
+		background-color:#A6A6A6;
+		width:400px;
+		height:430px;
+		padding:10px;
+		box-sizing:border-box;
+		border-radius:10px;
+	}
+	#form{
+		display:inline-block;
+		width:380px;
+		height:300px;
+		border:5px double #fff;
+		overflow:auto;
+		padding-left:20px;
+		box-sizing:border-box;
+	}
+	#h{
+		font-family:여기어때 잘난체;
+		font-size:1.5em;
+	 	margin-left: 140px;
+	}
+</style>
+</head>
+<body>
+
+<div id='main'>
+<h3 id='h'>회원관리</h3>
+	<input type='button' value='목록' id='btnList' />
+	<div id='form'></div>
+</div>
+
+<script>
+	$('#form').load('select.ejs');
+	btnfunc();
+</script>
+
+</body>
+</html>

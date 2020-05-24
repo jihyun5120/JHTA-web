@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>delete_result</title>
+<link rel='stylesheet' type='text/css' href='member.css'>
+<script src='jquery-3.4.1.js'></script>
+<script src='member.js'></script>
+</head>
+<body>
+    <h3><%=msg%></h3>
+    <form name='frm' id='frm' method='post'>
+        <input type='hidden' name='findStr' value='<%=findStr%>' />
+        <input type='button' value='목록' id='btnList' />
+    </form>
+    <script> btnFunc(); </script>
+</body>
+</html>
